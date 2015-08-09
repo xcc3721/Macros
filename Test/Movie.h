@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "Magic.h"
+
 @interface Movie : NSObject
 
 PROPERTY(NSString, cast);
