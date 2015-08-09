@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "NSObject+AutoElementClass.h"
+
+#import "ChineseMovie.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +21,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    NSLog(@"%@", [Movie elementClassForProperty:@selector(cast)]);
+    NSLog(@"%@", [ChineseMovie elementClassForProperty:@selector(countries)]);
+    NSLog(@"%@", [ChineseMovie elementClassForProperty:@selector(rate) recursive:YES]);
+    NSLog(@"%@", [ChineseMovie elementClassForProperty:@selector(cast) recursive:YES]);
+    
+    
+    
     return YES;
 }
 

@@ -15,6 +15,9 @@
 		5F403AE51B76791E0074785B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F403AE31B76791E0074785B /* LaunchScreen.storyboard */; };
 		5F403AF01B76791F0074785B /* TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F403AEF1B76791F0074785B /* TestTests.m */; };
 		5F403AFB1B76791F0074785B /* TestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F403AFA1B76791F0074785B /* TestUITests.m */; };
+		5FAE2F021B777850004D728A /* NSObject+AutoElementClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE2F011B777850004D728A /* NSObject+AutoElementClass.m */; };
+		5FAE2F0E1B777E98004D728A /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE2F0D1B777E98004D728A /* Movie.m */; };
+		5FAE2F121B778004004D728A /* ChineseMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE2F111B778004004D728A /* ChineseMovie.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,14 @@
 		5F403AF61B76791F0074785B /* TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F403AFA1B76791F0074785B /* TestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestUITests.m; sourceTree = "<group>"; };
 		5F403AFC1B76791F0074785B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FAE2EFF1B775DC6004D728A /* Magic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Magic.h; sourceTree = "<group>"; };
+		5FAE2F001B777850004D728A /* NSObject+AutoElementClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AutoElementClass.h"; sourceTree = "<group>"; };
+		5FAE2F011B777850004D728A /* NSObject+AutoElementClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AutoElementClass.m"; sourceTree = "<group>"; };
+		5FAE2F0C1B777E98004D728A /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		5FAE2F0D1B777E98004D728A /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		5FAE2F0F1B777F27004D728A /* Test.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.pch; sourceTree = "<group>"; };
+		5FAE2F101B778004004D728A /* ChineseMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseMovie.h; sourceTree = "<group>"; };
+		5FAE2F111B778004004D728A /* ChineseMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseMovie.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +112,15 @@
 		5F403AD41B76791E0074785B /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				5FAE2EFF1B775DC6004D728A /* Magic.h */,
+				5FAE2F001B777850004D728A /* NSObject+AutoElementClass.h */,
+				5FAE2F011B777850004D728A /* NSObject+AutoElementClass.m */,
 				5F403AD81B76791E0074785B /* AppDelegate.h */,
 				5F403AD91B76791E0074785B /* AppDelegate.m */,
+				5FAE2F0C1B777E98004D728A /* Movie.h */,
+				5FAE2F0D1B777E98004D728A /* Movie.m */,
+				5FAE2F101B778004004D728A /* ChineseMovie.h */,
+				5FAE2F111B778004004D728A /* ChineseMovie.m */,
 				5F403ADB1B76791E0074785B /* ViewController.h */,
 				5F403ADC1B76791E0074785B /* ViewController.m */,
 				5F403ADE1B76791E0074785B /* Main.storyboard */,
@@ -118,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				5F403AD61B76791E0074785B /* main.m */,
+				5FAE2F0F1B777F27004D728A /* Test.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -271,7 +290,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F403ADD1B76791E0074785B /* ViewController.m in Sources */,
+				5FAE2F021B777850004D728A /* NSObject+AutoElementClass.m in Sources */,
+				5FAE2F0E1B777E98004D728A /* Movie.m in Sources */,
 				5F403ADA1B76791E0074785B /* AppDelegate.m in Sources */,
+				5FAE2F121B778004004D728A /* ChineseMovie.m in Sources */,
 				5F403AD71B76791E0074785B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,10 +435,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = Test/Test.pch;
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alipay.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "";
 			};
 			name = Debug;
 		};
@@ -424,10 +448,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = Test/Test.pch;
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alipay.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "";
 			};
 			name = Release;
 		};
@@ -498,6 +524,7 @@
 				5F403B011B76791F0074785B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F403B021B76791F0074785B /* Build configuration list for PBXNativeTarget "TestTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +533,7 @@
 				5F403B041B76791F0074785B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F403B051B76791F0074785B /* Build configuration list for PBXNativeTarget "TestUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +542,7 @@
 				5F403B071B76791F0074785B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
